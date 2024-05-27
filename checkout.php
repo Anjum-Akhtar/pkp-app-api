@@ -37,7 +37,6 @@
             $payment_status = $json['payment_status'];
             $order_status = $json['order_status']; 
 
-           echo "INSERT INTO orders(fname,lname,company_name,street_address,country,state,city,pin,phone,email,ip_add,total_price,final_price,payment_type,payment_status,order_status) VALUES('".$fname."','".$lname."','".$company_name."','".$street_address."','".$country."','".$state."','".$city."','".$pincode."','".$phone."','".$email."','".$ip_address."','".$total_price."','".$final_price."','".$payment_type."','".$payment_status."','".$order_status."')";die;
             $sql = $conn->query("INSERT INTO orders(fname,lname,company_name,street_address,country,state,city,pin,phone,email,ip_add,total_price,final_price,payment_type,payment_status,order_status) VALUES('".$fname."','".$lname."','".$company_name."','".$street_address."','".$country."','".$state."','".$city."','".$pincode."','".$phone."','".$email."','".$ip_address."','".$total_price."','".$final_price."','".$payment_type."','".$payment_status."','".$order_status."')"); 
             
             if($sql){
