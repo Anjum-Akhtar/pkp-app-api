@@ -13,6 +13,7 @@
             
             if (mysqli_num_rows($result) > 0) { 
                 $data = mysqli_fetch_assoc($result); 
+                $data['long_desc']= html_entity_decode($data['long_desc']);
                 if(!empty($data['product_gallery'])){
                     
                     $gal_images = explode(',',$data['product_gallery']); 
